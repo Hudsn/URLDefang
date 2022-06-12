@@ -1,0 +1,25 @@
+{
+    "name":"URL Defang Copy",
+    "description":"For security analysts to safely copy and paste URLs and IPs in the browser",
+    "permissions":[
+        "contextMenus",
+        "tabs"
+    ],
+    "background":
+        {
+            "service_worker":"background.js"
+        },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["index.js"]
+        }
+    ],
+
+    "icons": {
+        "128": "128.png"
+    },
+
+    "version":"0.1",
+    "manifest_version":3
+}
